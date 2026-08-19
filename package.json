@@ -1,0 +1,44 @@
+{
+    "name": "@nsnanocat/flatbuffer-root",
+    "version": "0.1.0",
+    "description": "Configurable root-table processor for FlatBuffers JavaScript models",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NSNanoCat/FlatBufferRoot.git"
+    },
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./src/index.d.ts",
+            "import": "./src/index.mjs"
+        }
+    },
+    "types": "./src/index.d.ts",
+    "files": [
+        "src",
+        "README.md"
+    ],
+    "scripts": {
+        "format": "biome format --write src test package.json package-lock.json tsconfig.json biome.json",
+        "lint": "biome check src test package.json package-lock.json tsconfig.json biome.json",
+        "check": "npm run lint && npm test && npm run typecheck",
+        "test": "node --test test/flatBufferRootProcessor.test.mjs",
+        "typecheck": "tsc --noEmit --project tsconfig.json"
+    },
+    "dependencies": {
+        "@nsnanocat/util": "^2.7.0"
+    },
+    "peerDependencies": {
+        "flatbuffers": ">=24.12.23 <26"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.4.6",
+        "flatbuffers": "^25.9.23",
+        "typescript": "^5.9.3"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    }
+}
