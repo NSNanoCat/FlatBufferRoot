@@ -101,9 +101,9 @@ npm run check
 npm pack --dry-run
 ```
 
-推送 `v*` tag 后，GitHub Actions 会先执行安装和测试，再分别发布到 npm 与 GitHub Packages。
+按 [.github/RELEASE-TEMPLATE.md](.github/RELEASE-TEMPLATE.md) 维护当前版本的 [CHANGELOG.md](CHANGELOG.md)。推送 `v*` tag 后，GitHub Actions 会先执行安装和测试，再分别发布到 npm 与 GitHub Packages；稳定版和 `alpha` / `beta` 预发布 tag 还会使用 `CHANGELOG.md` 创建对应的 GitHub Release。
 
-Pushing a `v*` tag runs installation and tests in GitHub Actions before publishing to npm and GitHub Packages.
+Maintain the current [CHANGELOG.md](CHANGELOG.md) from [.github/RELEASE-TEMPLATE.md](.github/RELEASE-TEMPLATE.md). Pushing a `v*` tag runs installation and tests in GitHub Actions before publishing to npm and GitHub Packages. Stable and `alpha` / `beta` prerelease tags also create the corresponding GitHub Release from `CHANGELOG.md`.
 
 ## License
 
