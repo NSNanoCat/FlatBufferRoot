@@ -1,6 +1,8 @@
 <!-- 按 .github/RELEASE-TEMPLATE.md 维护当前版本的发布说明。 -->
 <!-- Maintain the current release notes based on .github/RELEASE-TEMPLATE.md. -->
 
+## [1.0.0] - 2026-08-20
+
 ### New Features
 
 - 新增由 FlatBuffers JavaScript 根表模型配置的逐 slot 编解码处理器。
